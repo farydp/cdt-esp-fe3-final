@@ -1,10 +1,17 @@
 import React from 'react'
 
+const footerStyle = {
+  backgroundColor: "red",
+  position: "absolute",
+ display: "flex", 
+ flexDirection: "row"
+}
+
 const Footer = () => {
   return (
-    <footer>
+    <footer style={footerStyle} >
         <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+        <img src="../../public/images/DH.png" alt='DH-logo' />
     </footer>
   )
 }
