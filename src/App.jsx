@@ -6,11 +6,13 @@ import Home from "./Routes/Home";
 import Contact from "./Routes/Contact";
 import Favs from "./Routes/Favs";
 import Detail from "./Routes/Detail";
+import Context from "./Context/Context";
 
 
 function App() {
   return (
       <div className="App">
+        <Context>
           <Navbar/>
           <Routes>
             <Route path="/" element={<Home/>} />
@@ -20,6 +22,7 @@ function App() {
             <Route path="*" element={<h1>404 Not Found</h1>} ></Route>
           </Routes>
           <Footer/>
+        </Context>          
       </div>
   );
 }
