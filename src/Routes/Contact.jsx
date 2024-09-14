@@ -14,7 +14,6 @@ const Contact = () => {
     <div className={state.toggle ? RoutesStyle.contact : DarkStyle.contact}>
       <div className='divForm'>
         <h2 style={{marginBottom: "160%"}}>Want to know more?</h2>
-        
       </div>
       <Form/>
     </div>

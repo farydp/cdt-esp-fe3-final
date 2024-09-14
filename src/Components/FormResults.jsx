@@ -2,7 +2,7 @@ import React from 'react'
 
 const FormResults = ({name, email}) => {
   return (
-    <div style={{position: "absolute", textAlign: "left"}}>
+    <div style={{position: "absolute", textAlign: "left", marginTop: "10%"}}>
         <h2>Thanks {name}</h2>
         <h2>We will contact you ASAP in {email}</h2>
     </div>

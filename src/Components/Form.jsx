@@ -53,7 +53,7 @@ const Form = () => {
       }
       {
         error ? 
-        <h3 style={{color: "red", position: "absolute", width: "200px", }} > Please, verify the his entered information again</h3>
+        <h3 style={{color: "red", position: "absolute", width: "200px", marginTop: "10%", marginLeft: "10%"}} > Please, verify theq entered information again</h3>
         :
         null
       }
