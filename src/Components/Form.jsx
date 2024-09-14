@@ -26,7 +26,7 @@ const Form = () => {
     const SpaceRegex = /\s/
     
     if (customer.name.length > 5 && customer.name.charAt(0) != (" ") && customer.name.slice(-1) != (" ") && SpaceRegex.test(customer.name)
-    && emailRegex.test(customer.email) && SpaceRegex) 
+    && emailRegex.test(customer.email)) 
     {
       setRenderData(true)
       setError(false)
@@ -43,7 +43,7 @@ const Form = () => {
         <label htmlFor="">What is your name and lastme?</label>
         <input type="text" value={customer.name} onChange={handleChangeName}/>
         <label htmlFor="">Which email should we use to contact you?</label>
-        <input type="email" value={customer.email} onChange={handleChangeEmail}/>
+        <input type="text" value={customer.email} onChange={handleChangeEmail}/>
         <button onClick={handleSubmit} >Submit</button>
       </form>
       :

@@ -1,5 +1,6 @@
 import axios from "axios";
-import { createContext, useContext, useEffect, useReducer} from "react";
+import { createContext, useContext, useEffect, useReducer, useState} from "react";
+import { reducer } from "./reducer";
 
 const DentistStates = createContext()
 
@@ -9,19 +10,11 @@ const Context = ({children}) => {
 
     // const [dentist, setDentist] = useState([])
     // const [favDentist, setFavDentist] = useState([])
-
-    const reducer = (state, action) => {
-        switch (action.type){
-            case "GetDentist":
-                return {...state, dentist: action.payload}
-            case "ADD2Favs":
-                return {...state, favDentist: [...state.favDentist, action.payload]}
-        }
-    }
+    const favStorage = JSON.parse(localStorage.getItem("FavoritesDentist")) || [];
 
     const initialState = {
         dentist: [],
-        favDentist: []
+        favDentist: favStorage
     }
 
     const [state, dispatch] = useReducer(reducer, initialState);

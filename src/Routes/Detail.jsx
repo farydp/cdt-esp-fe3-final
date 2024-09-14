@@ -37,12 +37,12 @@ const Detail = () => {
         </div>
         : 
         <div style={{display: "flex", flexDirection: "column" , alignItems: "center", fontSize: "130%"}} >
-          <h2>
-            {dentistDetails.name}
-          </h2> 
+          <h2>{dentistDetails.name}</h2>
+          <img style={{width: "180px", alignItems: "left"}} src="../../public/images/doctor.jpg" alt="" /> 
           <h3>{dentistDetails.email}</h3>
           <h3>{dentistDetails.phone}</h3>
           <h3>{dentistDetails.website}</h3>
+          
         </div>
         }
         

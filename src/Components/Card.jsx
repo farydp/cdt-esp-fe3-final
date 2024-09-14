@@ -1,16 +1,24 @@
 import {Link} from "react-router-dom"
 import { useDentistStates } from "../Context/Context";
+import { useEffect } from "react";
 
 
 const Card = ({dentistObject, name, username, id}) => {
   // const addFav = ()=>{
   //         
   // }
+  
+  
+
   const {dispatch, state} = useDentistStates();
-  console.log(state. favDentist)
+  // localStorage.setItem("prueba", value)
+  
+  
+
   return (
     <div className="card">
-        <Link to={"/Detail/" + id}  >
+        <Link to={"/Detail/" + id}>
+          <img style={{width: "180px", alignItems: "left"}} src="../../public/images/doctor.jpg" alt="" />
           <h2>{username}</h2>
           <h2>{name}</h2>
           <h3>{id}</h3>

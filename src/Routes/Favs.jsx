@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../Components/Card";
 import { useDentistStates } from "../Context/Context";
 
@@ -6,7 +6,12 @@ import { useDentistStates } from "../Context/Context";
 
 const Favs = () => {
 
-  const {state} = useDentistStates();
+  const {state, dispatch} = useDentistStates();
+  
+  useEffect(() => {
+    localStorage.setItem("FavoritesDentist", JSON.stringify(state.favDentist))  
+  }, [state])
+
   
   return (
     <>
@@ -21,6 +26,7 @@ const Favs = () => {
           </Card>
         ))}
       </div>
+      <button onClick={() => dispatch({type: "ResetFavs"})} > RESET FAVORITES</button>
     </>
   );
 };
