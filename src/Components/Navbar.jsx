@@ -4,6 +4,8 @@ import Favs from '../Routes/Favs'
 import Contact from '../Routes/Contact'
 import { Link, useNavigate, useNavigation } from 'react-router-dom'
 import { useDentistStates } from '../Context/Context'
+import RoutesStyle from "../Routes/RoutesStyle/RoutesStyle.module.css"
+import DarkStyle from "../Routes/RoutesStyle/DarkStyle.module.css"
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -14,7 +16,8 @@ const Navbar = () => {
   const backto = useNavigate()
 
   return (
-    <nav style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
+    <nav style={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}
+    className={state.toggle ? RoutesStyle.fondo : DarkStyle.fondo}>
       
       <button onClick={() => backto(-1)} >🔙</button>
       <Link to={"/"} ><h3>Home</h3></Link>
