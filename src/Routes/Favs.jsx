@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Card from "../Components/Card";
 import { useDentistStates } from "../Context/Context";
+import RoutesStyle from "./RoutesStyle/RoutesStyle.module.css"
+import DarkStyle from "./RoutesStyle/DarkStyle.module.css"
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -14,8 +16,8 @@ const Favs = () => {
 
   
   return (
-    <>
-      <h1>Dentists Favs</h1>
+    <div className={state.toggle ? RoutesStyle.fondo : DarkStyle.fondo}>
+      <h1>Favorite Dentists</h1>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
@@ -27,7 +29,7 @@ const Favs = () => {
         ))}
       </div>
       <button onClick={() => dispatch({type: "ResetFavs"})} > RESET FAVORITES</button>
-    </>
+    </div>
   );
 };
 

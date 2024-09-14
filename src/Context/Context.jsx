@@ -14,7 +14,8 @@ const Context = ({children}) => {
 
     const initialState = {
         dentist: [],
-        favDentist: favStorage
+        favDentist: favStorage,
+        toggle: true
     }
 
     const [state, dispatch] = useReducer(reducer, initialState);

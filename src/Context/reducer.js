@@ -6,5 +6,7 @@
             return {...state, favDentist: [...state.favDentist, action.payload]}
         case "ResetFavs":
             return {...state, favDentist: []}
+        case "Toggle":
+            return {...state, toggle: action.payload}
     }
 }
