@@ -9,11 +9,14 @@ import DarkStyle from "./RoutesStyle/DarkStyle.module.css"
 const Favs = () => {
 
   const {state, dispatch} = useDentistStates();
-  
+  const resetFavs = () => {
+      dispatch({type: "ResetFavs"})
+      
+  }
+
   useEffect(() => {
     localStorage.setItem("FavoritesDentist", JSON.stringify(state.favDentist))  
   }, [state])
-
   
   return (
     <div className={state.toggle ? RoutesStyle.fondo : DarkStyle.fondo}>
@@ -28,7 +31,7 @@ const Favs = () => {
           </Card>
         ))}
       </div>
-      <button onClick={() => dispatch({type: "ResetFavs"})} > RESET FAVORITES</button>
+      <button onClick={resetFavs} > RESET FAVORITES</button>
     </div>
   );
 };

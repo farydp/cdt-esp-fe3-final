@@ -7,18 +7,17 @@ const DentistStates = createContext()
 const Context = ({children}) => {
 
     const dentistAPIContext =  "https://jsonplaceholder.typicode.com/users"
-
-    // const [dentist, setDentist] = useState([])
-    // const [favDentist, setFavDentist] = useState([])
     const favStorage = JSON.parse(localStorage.getItem("FavoritesDentist")) || [];
-
     const initialState = {
         dentist: [],
         favDentist: favStorage,
         toggle: true
     }
-
     const [state, dispatch] = useReducer(reducer, initialState);
+
+    
+    
+    
 
     useEffect( ()=> {
         axios.get(dentistAPIContext)

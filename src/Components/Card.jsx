@@ -8,10 +8,8 @@ const Card = ({dentistObject, name, username, id}) => {
   const {dispatch, state} = useDentistStates();
 
   const isFavorite = state.favDentist.find((favElement) => {
-    console.log(favElement)
-    console.log(dentistObject)
     return favElement.id == dentistObject.id})
-  const addFav = ()=>{
+  const addFav = () => {
     
     if (isFavorite){
       dispatch({type: "RemoveFav", payload: dentistObject})
@@ -19,7 +17,10 @@ const Card = ({dentistObject, name, username, id}) => {
       dispatch({type: "ADD2Favs", payload: dentistObject})
     }
   }  
-  console.log(isFavorite)
+
+  useEffect(() => {
+      localStorage.setItem("FavoritesDentist", JSON.stringify(state.favDentist))  
+  }, [state])
   return (
     <div className="card">
         <Link to={"/Detail/" + id}>

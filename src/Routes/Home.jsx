@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Card from '../Components/Card'
-import ReducerCount from "../Components/ReducerCount"
-import axios from 'axios';
-import { Link, useNavigate, useNavigation } from 'react-router-dom'
 import { useDentistStates } from '../Context/Context';
 import RoutesStyle from "./RoutesStyle/RoutesStyle.module.css"
 import DarkStyle from "./RoutesStyle/DarkStyle.module.css"
@@ -26,7 +23,6 @@ const Home = () => {
           </Card>
         ))}
       </div>
-      <ReducerCount/>
     </main>
   )
 }
