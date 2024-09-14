@@ -12,7 +12,6 @@ import DarkStyle from "../Routes/RoutesStyle/DarkStyle.module.css"
 const Navbar = () => {
 
   const {dispatch, state} = useDentistStates();
-  console.log(state.toggle)
   const backto = useNavigate()
 
   return (

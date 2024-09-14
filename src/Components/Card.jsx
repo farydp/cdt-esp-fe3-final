@@ -4,17 +4,22 @@ import { useEffect } from "react";
 
 
 const Card = ({dentistObject, name, username, id}) => {
-  // const addFav = ()=>{
-  //         
-  // }
   
-  
-
   const {dispatch, state} = useDentistStates();
-  // localStorage.setItem("prueba", value)
-  
-  
 
+  const isFavorite = state.favDentist.find((favElement) => {
+    console.log(favElement)
+    console.log(dentistObject)
+    return favElement.id == dentistObject.id})
+  const addFav = ()=>{
+    
+    if (isFavorite){
+      dispatch({type: "RemoveFav", payload: dentistObject})
+    } else {
+      dispatch({type: "ADD2Favs", payload: dentistObject})
+    }
+  }  
+  console.log(isFavorite)
   return (
     <div className="card">
         <Link to={"/Detail/" + id}>
@@ -26,8 +31,7 @@ const Card = ({dentistObject, name, username, id}) => {
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
 
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={() => dispatch({type: "ADD2Favs", payload: dentistObject})} 
-        className="favButton">Add fav</button>
+        <button onClick={addFav} className="favButton">{isFavorite ? "✨" : "Fav" }</button>
     </div>
   );
 };
