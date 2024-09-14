@@ -19,8 +19,9 @@ const Favs = () => {
   }, [state])
   
   return (
-    <div className={state.toggle ? RoutesStyle.fondo : DarkStyle.fondo}>
+    <div >
       <h1>Favorite Dentists</h1>
+      <button className={state.toggle ? RoutesStyle.especial : DarkStyle.especial} onClick={resetFavs} > RESET FAVORITES</button>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
@@ -31,7 +32,8 @@ const Favs = () => {
           </Card>
         ))}
       </div>
-      <button onClick={resetFavs} > RESET FAVORITES</button>
+      <p style={{marginBottom: "35%"}}>🌟</p>
+      
     </div>
   );
 };

@@ -29,8 +29,9 @@ const Detail = () => {
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   
   return (
-    <div className={state.toggle ? RoutesStyle.fondo : DarkStyle.fondo}>
-      <h1>Detail Dentist id </h1>
+    <div className={state.toggle ? RoutesStyle.detail : DarkStyle.detail}
+    >
+      <h1>Dentist's details</h1>
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       { loading ?
@@ -41,9 +42,12 @@ const Detail = () => {
         <div style={{display: "flex", flexDirection: "column" , alignItems: "center", fontSize: "130%"}} >
           <h2>{dentistDetails.name}</h2>
           <img style={{width: "180px", alignItems: "left"}} src="../../public/images/doctor.jpg" alt="" /> 
-          <h3>{dentistDetails.email}</h3>
-          <h3>{dentistDetails.phone}</h3>
-          <h3>{dentistDetails.website}</h3>
+          <p style={{display: "flex", flexDirection: "column", justifyContent: "space-around", alignItems: "flex-start", marginBottom: "10%"}}>
+            <h3>{dentistDetails.email}</h3>
+            <h3>{dentistDetails.phone}</h3>
+            <h3>{dentistDetails.website}</h3>
+          </p>
+          
           
         </div>
         }

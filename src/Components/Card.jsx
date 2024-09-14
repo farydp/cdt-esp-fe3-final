@@ -1,6 +1,8 @@
 import {Link} from "react-router-dom"
 import { useDentistStates } from "../Context/Context";
 import { useEffect } from "react";
+import RoutesStyle from "../Routes/RoutesStyle/RoutesStyle.module.css"
+import DarkStyle from "../Routes/RoutesStyle/DarkStyle.module.css"
 
 
 const Card = ({dentistObject, name, username, id}) => {
@@ -22,7 +24,7 @@ const Card = ({dentistObject, name, username, id}) => {
       localStorage.setItem("FavoritesDentist", JSON.stringify(state.favDentist))  
   }, [state])
   return (
-    <div className="card">
+    <div className={state.toggle ? RoutesStyle.card : DarkStyle.card}>
         <Link to={"/Detail/" + id}>
           <img style={{width: "180px", alignItems: "left"}} src="../../public/images/doctor.jpg" alt="" />
           <h2>{username}</h2>

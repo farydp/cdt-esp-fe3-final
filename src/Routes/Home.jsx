@@ -11,8 +11,6 @@ const Home = () => {
   const {state} = useDentistStates();
 
   return (
-
-
     <main className={state.toggle ? RoutesStyle.fondo : DarkStyle.fondo}>
       <h1>Home</h1>
       <div className='card-grid'>

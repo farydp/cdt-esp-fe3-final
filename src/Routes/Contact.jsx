@@ -11,9 +11,11 @@ const Contact = () => {
   const {state} = useDentistStates();
 
   return (
-    <div className={state.toggle ? RoutesStyle.fondo : DarkStyle.fondo}>
-      <h2>Want to know more?</h2>
-      <p>Send us your questions and we will contact you</p>
+    <div className={state.toggle ? RoutesStyle.contact : DarkStyle.contact}>
+      <div className='divForm'>
+        <h2 style={{marginBottom: "160%"}}>Want to know more?</h2>
+        
+      </div>
       <Form/>
     </div>
   )

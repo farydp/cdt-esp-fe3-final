@@ -1,3 +1,60 @@
 .fondo{
-    background-color: aqua;
+    background-color: #F1F3F5;
+}
+
+.app{
+    background-color: #D8DADC;
+}
+
+.footer{
+    background-color: #c0c0c0;
+    margin: auto;
+    width:auto 
+}
+
+.nav{
+    background-color: #F1F3F5;
+}
+
+.nav a{
+    color: rgb(28, 26, 24);
+    border-radius: 20;
+    border-color: rgb(28, 26, 24);
+    border: 2px solid black;
+    background-color: rgb(43, 43, 43);
+}
+
+button{
+    background-color: rgba(136, 136, 136, 0.116);
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    border: 0.5px solid rgb(136, 136, 136);
+}
+
+.contact{
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin-bottom: 10%
+}
+
+.detail h3{
+    color: rgb(28, 26, 24);
+    margin: 0px;
+}
+.especial{
+  border: none; 
+  color: white; 
+  padding: 14px 28px; 
+  cursor: pointer; 
+  border-radius: 5px; 
+  display: inline-flex;
+  background-color: #e8cba3;
 }

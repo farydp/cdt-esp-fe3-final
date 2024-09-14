@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import FormResults from "./FormResults";
 import { useDentistStates } from "../Context/Context";
+import RoutesStyle from "../Routes/RoutesStyle/RoutesStyle.module.css"
+import DarkStyle from "../Routes/RoutesStyle/DarkStyle.module.css"
 
 
 const Form = () => {
@@ -38,8 +40,8 @@ const Form = () => {
   return (
     <div>
       {!renderData ? 
-      <form>
-        <h4 style={{textAlign: "lef"}} >Please, give us your contact details and we will reach out to you! </h4>
+      <form style={{marginBottom: "20%", marginLeft: "30%"}}>
+        <h4 style={{textAlign: "lef", marginTop: "20%"}} >Please, give us your contact details and we will reach out to you! </h4>
         <label htmlFor="">What is your name and lastme?</label>
         <input type="text" value={customer.name} onChange={handleChangeName}/>
         <label htmlFor="">Which email should we use to contact you?</label>

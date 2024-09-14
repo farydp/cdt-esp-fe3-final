@@ -1,3 +1,72 @@
 .fondo{
-    background-color: gray;
+    background-color: #1E2127;
 }
+
+.app{
+    background-color: #303031;
+    color: antiquewhite;
+}
+
+.footer{
+    background-color: #c0c0c0;
+    margin: auto;
+    width:auto 
+}
+
+.nav{
+    background-color: #1E2127;
+    color: antiquewhite;
+}
+
+.nav a{
+    color: antiquewhite;
+    border-radius: 20;
+    border-color: antiquewhite;
+}
+
+button{
+    background-color: #c0c0c0;
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    border: 0.5px solid rgb(136, 136, 136);
+    color: antiquewhite;
+  }
+
+.card h2{
+    color: antiquewhite;
+}
+
+.card h3{
+    color: antiquewhite;
+}
+
+.contact{
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 1;
+    margin-bottom: 10%
+}
+
+
+.detail h3{
+    color: antiquewhite;
+    margin: 0px;
+}
+
+.especial{
+    border: none; 
+    color: white; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    display: inline-flex;
+    background-color: #4a3e2a;
+    margin-bottom: 40;
+  }
